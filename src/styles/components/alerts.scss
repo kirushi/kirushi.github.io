@@ -1,0 +1,22 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+.alert {
+  border-radius: 0px;
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  &--error {
+    background-color: $darkRed;
+    color: white;
+  }
+  &__icon {
+    position: absolute;
+    right: 16px;
+    top: 17px;
+  }
+}

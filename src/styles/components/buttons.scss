@@ -1,0 +1,48 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+.btn, button {
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  font-size: 1.6rem;
+  padding: 1px 6px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-block;
+  &--primary {
+    background: $darkBlue;
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: white;
+    }
+  }
+  &--default {
+    border: none;
+    background-color: transparent;
+  }
+  &--normal {
+    text-align: left;
+    padding-left: 5px !important;
+  }
+  &--large {
+    font-size: 2.0rem;
+  }
+  &--block {
+    display: block;
+  }
+  &--float {
+    @include button-effect;
+  }
+  &--white {
+    color: white !important;
+  }
+  &--block {
+    display: block;
+    width: 100%;
+  }
+}

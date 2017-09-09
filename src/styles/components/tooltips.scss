@@ -1,0 +1,11 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+.tooltip {
+  &--red {
+    color: $darkRed
+  }
+  &--dots {
+    border-bottom: 1px dashed $darkRed;
+  }
+}

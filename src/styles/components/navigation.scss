@@ -1,0 +1,28 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+.navigation {
+  position: fixed;
+  top: 1.25em;
+  left: 1.25em;
+  z-index: $z-index-1;
+  &__brand {
+    padding: 10px 15px;
+  }
+  &--dark {
+    .navigation__brand {
+      color: white;
+      background-color: $darkRed;
+    }
+  }
+  &--light {
+    .navigation__brand {
+      color: $darkRed;
+      background-color: white;
+    }
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}

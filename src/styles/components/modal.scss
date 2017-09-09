@@ -1,0 +1,28 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+.modal {
+  display: block;
+  background-color: white;
+  bottom: auto;
+  border-radius: 2px;
+  @include box-shadow-1;
+  &__content {
+    padding: 20px 20px 0 20px;
+    &--center {
+      text-align: center;
+    }
+  }
+  &__footer {
+    padding: 10px 20px 20px 20px;
+    &--center {
+      text-align: center;
+    }
+  }
+  &__width {
+    top: 125px;
+    left: calc(50% - 200px);
+    z-index: 21;
+    width: 400px;
+  }
+}

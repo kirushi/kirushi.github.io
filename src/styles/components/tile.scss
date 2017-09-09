@@ -1,0 +1,30 @@
+@import '../config/variables'; // colors, fonts etc...
+@import '../config/mixins'; // custom mixins
+
+$spacing: 15px;
+
+.tile {
+  background-color: white;
+  border-radius: 2px;
+  padding: $spacing 0 0 0;
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  &--shadow {
+    @include box-shadow-base;
+  }
+  &__header {
+    padding: 0 $spacing 0 $spacing;
+    border-bottom: 1px solid $subtleLightBlue;
+  }
+  &__body {
+    padding: 10px $spacing 0 $spacing;
+    border-bottom: 1px solid $subtleLightBlue;
+  }
+  &__footer {
+    padding: 10px $spacing 5px $spacing;
+    &--subtle {
+      background-color: $subtleLightGrey;
+    }
+  }
+}
